@@ -40,6 +40,9 @@ ul{
 .scale:hover{
     transform: scale(1.5);
 }
+.square {
+    list-style-type:square;
+}
 iframe {
     width: 785px;
     height: 442px;
