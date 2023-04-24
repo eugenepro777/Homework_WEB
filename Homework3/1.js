@@ -1,10 +1,12 @@
 // Температура в С° -> температура в F
 function myScript() {
-    let temperatureC = Number.parseFloat(prompt("Введите температуру в градусах С°"));
+    const temperatureC = Number.parseFloat(prompt("Введите температуру в градусах С°"));
     alert(`\tтемпература в Цельсиях = ${temperatureC} C°,
-        температура в Фаренгейтах = ${+getTemperatureConversion(temperatureC)} F`);
+        температура в Фаренгейтах = ${+getTemperatureConversion(temperatureC).toFixed(1)} F`);
     function getTemperatureConversion(temp) {
-        temperatureF = (9 / 5) * temp + 32;
-        return temperatureF.toFixed(1);
+        const temperatureF = (9 / 5) * temp + 32;
+        return temperatureF;
     }
 }
+const clickButton = document.querySelector('button');        
+clickButton.addEventListener('click', myScript);
